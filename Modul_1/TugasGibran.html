@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
+</head>
+<body>
+
+    <img src="img/stitek.png" alt="Logo Kampus" width="100">
+
+    <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+
+    <form action="/submit" method="post">
+
+        <fieldset>
+            <legend>Data Pribadi</legend>
+
+            <p>
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+            </p>
+
+            <p>
+                <label>Jenis Kelamin:</label><br>
+                <input type="radio" id="pria" name="gender" value="Pria" required>
+                <label for="pria">Pria</label>
+                
+                <input type="radio" id="wanita" name="gender" value="Wanita" required>
+                <label for="wanita">Wanita</label>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Hobi dan Jurusan</legend>
+
+            <p>
+                <label>Hobi:</label><br>
+                <input type="checkbox" id="hobi1" name="hobi" value="Membaca">
+                <label for="hobi1">Membaca</label><br>
+                
+                <input type="checkbox" id="hobi2" name="hobi" value="Olahraga">
+                <label for="hobi2">Olahraga</label><br>
+                
+                <input type="checkbox" id="hobi3" name="hobi" value="Musik">
+                <label for="hobi3">Musik</label>
+            </p>
+
+            <p>
+                <label for="jurusan">Pilihan Jurusan:</label><br>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="">-- Pilih Jurusan --</option>
+                    <option value="Teknik Informatika">Teknik Informatika</option>
+                    <option value="Manajemen">Manajemen</option>
+                    <option value="Akuntansi">Akuntansi</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Informasi Tambahan</legend>
+            <p>
+                <label for="alamat">Alamat Lengkap:</label><br>
+                <textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Alamat rumah Anda"></textarea>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Kirim Pendaftaran">
+
+    </form>
+
+    <br>
+    
+    <p>Lihat <a href="https://pmb.stitek.ac.id/program-studi">Informasi Kampus</a></p>
+
+</body>
+</html>
