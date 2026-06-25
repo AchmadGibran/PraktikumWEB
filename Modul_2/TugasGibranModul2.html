@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktikum CSS</title>
+    <style>
+        /* 4.b Reset box-sizing agar padding/border tidak merusak ukuran elemen */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1.a & 1.b Tampilan Umum Halaman */
+        body {
+            background-color: #add8e6;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* 2.e Pembatasan Container di Tengah Halaman */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 1.c Gaya Judul Utama */
+        h1 {
+            color: #ffffff;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* 1.d & 4.a Gaya Paragraf dengan Sudut Membulat */
+        p {
+            background-color: #d3d3d3;
+            color: #000000;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: justify;
+            border-radius: 8px;
+        }
+
+        /* 2.a & 2.d Grid Kontainer 3 Kolom */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /* 2.b & 4.a Aturan Dasar untuk Setiap Kotak */
+        .box {
+            border: 2px solid #000000;
+            padding: 10px;
+            height: 150px;
+            border-radius: 8px;
+        }
+
+        /* 2.c Pewarnaan Masing-masing Kotak */
+        .box1 { background-color: #ff9999; }
+        .box2 { background-color: #99ff99; }
+        .box3 { background-color: #9999ff; }
+
+        /* 3.a Responsive Design: Tampilan Tablet (<= 768px) */
+        @media only screen and (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Berubah jadi 2 kolom */
+            }
+        }
+
+        /* 3.b & 3.c Responsive Design: Tampilan Smartphone (<= 480px) */
+        @media only screen and (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Berubah jadi 1 kolom */
+            }
+            h1 {
+                font-size: 28px; /* Judul mengecil */
+            }
+            .box {
+                height: 120px; /* Tinggi kotak berkurang */
+            }
+            p {
+                padding: 10px; /* Padding paragraf berkurang */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian 1: Tampilan Umum -->
+        <h1>Praktikum CSS Gibran</h1>
+        <p>Ini adalah sebuah paragraf di bawah judul yang memiliki latar belakang abu-abu muda, teks berwarna hitam. Sudut dari paragraf ini juga dibuat membulat menggunakan properti border-radius.</p>
+
+        <!-- Bagian 2: Layout Kotak (Box) -->
+        <div class="grid-container">
+            <div class="box box1">Kotak 1</div>
+            <div class="box box2">Kotak 2</div>
+            <div class="box box3">Kotak 3</div>
+        </div>
+    </div>
+
+</body>
+</html>

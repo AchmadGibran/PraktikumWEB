@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan Responsive CSS Gibran</title>
+    <style>
+        /* Gaya dasar untuk layar desktop */
+        body {
+            background-color: lightblue; /* Instruksi: biru untuk desktop */
+            transition: background-color 0.3s ease;
+            font-family: sans-serif;
+        }
+
+        /* Ukuran teks utama pada layar desktop (besar) */
+        .responsive-text {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            transition: font-size 0.3s ease;
+        }
+
+        /* Grid 3 kolom untuk desktop */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Media Query untuk Smartphone (Lebar maksimal 600px) */
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightcoral; /* Instruksi: merah untuk smartphone */
+            }
+
+            /* Instruksi: teks yang ukurannya berubah sesuai ukuran layar */
+            .responsive-text {
+                font-size: 20px; /* Ukuran mengecil di HP */
+            }
+
+            /* Instruksi: grid berubah menjadi 1 kolom */
+            .grid-container {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Teks eksperimen yang ukurannya dinamis -->
+    <div class="responsive-text">Ukuran Teks Ini Berubah Mengikuti Layar</div>
+
+    <div class="grid-container">
+        <div class="grid-item">Item 1 Gibran</div>
+        <div class="grid-item">Item 2 Gibran</div>
+        <div class="grid-item">Item 3 Gibran</div>
+    </div>
+
+</body>
+</html>
